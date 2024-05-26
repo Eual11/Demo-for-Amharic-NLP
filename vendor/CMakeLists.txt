@@ -11,7 +11,6 @@ FetchContent_Declare(
   )
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 set(SDL_SHARED_ENABLED OFF)
-# set(SDL_SHARED FALSE CACHE BOOL "Build a SDL shared library (if available)")
 message(STATUS "Fetching SDL")
 FetchContent_MakeAvailable(SDL)
 add_subdirectory(imgui-setup)
