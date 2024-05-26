@@ -6,3 +6,7 @@ src/im0.cpp
 src/im1.cpp
 src/im2.cpp
 src/main.cpp
+.cache/clangd/index
+notes.md
+compile_commands.json
+Makefile
