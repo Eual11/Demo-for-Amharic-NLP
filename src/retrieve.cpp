@@ -113,7 +113,7 @@ int main(int, char **) {
       0x01, 0x137F, // Amharic block
       0,            // End of ranges
   };
-  ImFont *font = io.Fonts->AddFontFromFileTTF("../font/noto_sans_ethiopic.ttf",
+  ImFont *font = io.Fonts->AddFontFromFileTTF("./font/noto_sans_ethiopic.ttf",
                                               18.0f, NULL, amharic_ranges);
   assert(font != NULL);
   while (!quit) {
