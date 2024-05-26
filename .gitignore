@@ -9,4 +9,3 @@ src/main.cpp
 .cache/clangd/index
 notes.md
 compile_commands.json
-Makefile
