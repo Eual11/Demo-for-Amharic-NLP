@@ -1,0 +1,13 @@
+set(APP "e")
+set(SRC "./retrieve.cpp")
+add_executable(${APP} ${SRC})
+target_include_directories(${APP} PUBLIC ${CMAKE_SOURCE_DIR}/include $ENV{CPLUS_INCLUDE_DIR}) 
+target_link_libraries(${APP} PRIVATE SDL2::SDL2 SDL2::SDL2main imgui)
+if (MSVC)
+    target_compile_options(${APP} PRIVATE /source-charset:utf-8 /execution-charset:utf-8)
+else()
+    target_compile_options(${APP} PRIVATE -finput-charset=UTF-8 -fexec-charset=UTF-8)
+endif()
+target_compile_features(${APP} PRIVATE cxx_std_17)
+set_target_properties(${APP} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
