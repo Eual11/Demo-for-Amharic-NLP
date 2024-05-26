@@ -1,6 +1,6 @@
 set(APP "e")
 set(SRC "./retrieve.cpp")
-add_executable(${APP} ${SRC})
+add_executable(${APP} WIN32 ${SRC})
 target_include_directories(${APP} PUBLIC ${CMAKE_SOURCE_DIR}/include $ENV{CPLUS_INCLUDE_DIR}) 
 target_link_libraries(${APP} PRIVATE SDL2::SDL2 SDL2::SDL2main imgui)
 if (MSVC)
